@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第N回 — 回目名 — 永明异闻录·克劳德</title>
+<style>
+  :root {
+    /* Iris 调色板 — 修改这几个变量即可统一全书视觉 */
+    --bg-page:        #f5f0e8;
+    --bg-content:     #fdfaf3;
+    --text-body:      #3a3228;
+    --text-heading:   #5c3d2e;
+    --text-subtle:    #8c7b6a;
+    --accent:         #8b4513;
+    --accent-light:   #c4a882;
+    --claude-bg:      #f0ebe0;
+    --claude-border:  #b8a080;
+    --claude-text:    #5c4a3a;
+    --claude-label:   #9b7b5c;
+    --divider:        #d4c8b0;
+    --nav-hover:      #e8dcc8;
+    --font-body:      "Noto Serif SC", "Source Han Serif SC", "Songti SC", Georgia, serif;
+    --font-heading:   "Noto Serif SC", "Source Han Serif SC", "SimSun", serif;
+    --font-claude:    "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg-page);
+    color: var(--text-body);
+    font-family: var(--font-body);
+    line-height: 1.9;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+  }
+
+  /* ---- 回目头部 ---- */
+  .chapter-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--divider);
+  }
+  .chapter-number {
+    font-size: 0.9rem;
+    color: var(--text-subtle);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+  .chapter-title {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--text-heading);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+  .chapter-subtitle {
+    font-size: 0.85rem;
+    color: var(--text-subtle);
+    margin-top: 0.5rem;
+    font-style: italic;
+  }
+
+  /* ---- 正文段落 ---- */
+  .content p {
+    text-indent: 2em;
+    margin-bottom: 1.2em;
+    text-align: justify;
+  }
+  .content p.no-indent {
+    text-indent: 0;
+  }
+
+  /* ---- 场景分隔 ---- */
+  .scene-break {
+    text-align: center;
+    margin: 2.5rem 0;
+    color: var(--divider);
+    font-size: 1.2rem;
+    letter-spacing: 0.5em;
+    user-select: none;
+  }
+
+  /* ---- Claude 心声对话 ---- */
+  .claude-dialogue {
+    margin: 1.8em 0;
+    padding: 1.2em 1.4em;
+    background: var(--claude-bg);
+    border-left: 4px solid var(--claude-border);
+    border-radius: 0 6px 6px 0;
+    font-family: var(--font-claude);
+    color: var(--claude-text);
+    position: relative;
+  }
+  .claude-dialogue::before {
+    content: "⟐ Claude";
+    display: block;
+    font-size: 0.7rem;
+    color: var(--claude-label);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.6em;
+    font-family: var(--font-claude);
+  }
+  .claude-dialogue p {
+    text-indent: 0 !important;
+    margin-bottom: 0.5em;
+  }
+
+  /* 主角内心查询 Claude 的样式 */
+  .mind-query {
+    text-indent: 0 !important;
+    font-style: italic;
+    color: var(--text-subtle);
+    margin: 1em 0 0.3em 0;
+    font-size: 0.9em;
+  }
+  .mind-query::before {
+    content: "◈ 问心 · ";
+    font-style: normal;
+    font-size: 0.75em;
+    letter-spacing: 0.08em;
+    color: var(--accent-light);
+  }
+
+  /* ---- 页脚导航 ---- */
+  .chapter-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--divider);
+    font-size: 0.9rem;
+  }
+  .chapter-nav a {
+    color: var(--accent);
+    text-decoration: none;
+    padding: 0.4em 0.8em;
+    border-radius: 4px;
+    transition: background 0.2s;
+  }
+  .chapter-nav a:hover {
+    background: var(--nav-hover);
+  }
+  .chapter-nav .toc-link {
+    color: var(--text-subtle);
+    font-size: 0.85rem;
+  }
+
+  /* ---- 响应式 ---- */
+  @media (max-width: 600px) {
+    body { padding: 1.5rem 1rem; }
+    .chapter-title { font-size: 1.4rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ====== 回目头部 ====== -->
+<header class="chapter-header">
+  <div class="chapter-number">第 N 回</div>
+  <h1 class="chapter-title"><!-- 回目名 --></h1>
+  <div class="chapter-subtitle"><!-- 副标题/提要（可选） --></div>
+</header>
+
+<!-- ====== 正文 ====== -->
+<article class="content">
+
+  <!-- 普通叙事段落 -->
+  <p><!-- 正文内容 --></p>
+
+  <!-- 主角内心向 Claude 提问 -->
+  <p class="mind-query"><!-- 主角的心声提问 --></p>
+
+  <!-- Claude 的回应 -->
+  <div class="claude-dialogue">
+    <p><!-- Claude 的回答 --></p>
+  </div>
+
+  <!-- 场景切换分隔 -->
+  <div class="scene-break">◆ ◆ ◆</div>
+
+</article>
+
+<!-- ====== 页脚导航 ====== -->
+<nav class="chapter-nav">
+  <a href="chapter-N-1.html">← 上一回</a>
+  <a class="toc-link" href="index.html">目 录</a>
+  <a href="chapter-N+1.html">下一回 →</a>
+</nav>
+
+</body>
+</html>

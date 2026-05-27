@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第二回 — 残夜问心初 — 永明异闻录·克劳德</title>
+<style>
+  :root { --bg-page: #f5f0e8; --text-body: #3a3228; --text-heading: #5c3d2e; --text-subtle: #8c7b6a; --accent: #8b4513; --accent-light: #c4a882; --claude-bg: #f0ebe0; --claude-border: #b8a080; --claude-text: #5c4a3a; --claude-label: #9b7b5c; --divider: #d4c8b0; --nav-hover: #e8dcc8; --font-body: "Noto Serif SC", "Source Han Serif SC", "Songti SC", Georgia, serif; --font-heading: "Noto Serif SC", "Source Han Serif SC", "SimSun", serif; --font-claude: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg-page); color: var(--text-body); font-family: var(--font-body); line-height: 1.9; max-width: 720px; margin: 0 auto; padding: 3rem 1.5rem; }
+  .chapter-header { text-align: center; margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 2px solid var(--divider); }
+  .chapter-number { font-size: 0.9rem; color: var(--text-subtle); letter-spacing: 0.15em; margin-bottom: 0.5rem; }
+  .chapter-title { font-family: var(--font-heading); font-size: 1.8rem; color: var(--text-heading); font-weight: 700; letter-spacing: 0.05em; }
+  .chapter-subtitle { font-size: 0.85rem; color: var(--text-subtle); margin-top: 0.5rem; font-style: italic; }
+  .content p { text-indent: 2em; margin-bottom: 1.2em; text-align: justify; }
+  .content p.no-indent { text-indent: 0; }
+  .scene-break { text-align: center; margin: 2.5rem 0; color: var(--divider); font-size: 1.2rem; letter-spacing: 0.5em; user-select: none; }
+  .claude-dialogue { margin: 1.8em 0; padding: 1.2em 1.4em; background: var(--claude-bg); border-left: 4px solid var(--claude-border); border-radius: 0 6px 6px 0; font-family: var(--font-claude); color: var(--claude-text); position: relative; }
+  .claude-dialogue::before { content: "⟐ Claude"; display: block; font-size: 0.7rem; color: var(--claude-label); letter-spacing: 0.1em; margin-bottom: 0.6em; font-family: var(--font-claude); }
+  .claude-dialogue p { text-indent: 0 !important; margin-bottom: 0.5em; }
+  .mind-query { text-indent: 0 !important; font-style: italic; color: var(--text-subtle); margin: 1em 0 0.3em; font-size: 0.9em; }
+  .mind-query::before { content: "◈ 问心 · "; font-style: normal; font-size: 0.75em; letter-spacing: 0.08em; color: var(--accent-light); }
+  .chapter-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--divider); font-size: 0.9rem; }
+  .chapter-nav a { color: var(--accent); text-decoration: none; padding: 0.4em 0.8em; border-radius: 4px; transition: background 0.2s; }
+  .chapter-nav a:hover { background: var(--nav-hover); }
+  .chapter-nav .toc-link { color: var(--text-subtle); font-size: 0.85rem; }
+  @media (max-width: 600px) { body { padding: 1.5rem 1rem; } .chapter-title { font-size: 1.4rem; } }
+</style>
+</head>
+<body>
+
+<header class="chapter-header">
+  <div class="chapter-number">第二回</div>
+  <h1 class="chapter-title">残夜问心初</h1>
+  <div class="chapter-subtitle">段一 · 降世藏锋</div>
+</header>
+
+<article class="content">
+
+  <!--
+    【场景】废弃山神庙内，同第一回
+    【时间】深秋，亥时（晚十点至十一点）
+    【核心】脑中出现声音是疯了还是真的？三个系统性测试。第一次心声对话。
+  -->
+
+  <p>那道门开了。</p>
+
+  <p>不是他自己打开的。是它自己开的像某个后台进程在满足了一组他看不见的触发条件之后自动启动了。上一秒他还在想"柴烟说明附近有人家"，下一秒这个念头就被另一个念头接住了。以一种不是他的方式接住了。不是文字，不是声音，不是任何他熟悉的感官形式。是他"知道"了不需要回忆，不需要解码，不需要理解。它已经被理解了。</p>
+
+  <p>他愣在原地。呼吸停了一拍。不是在分析是身体先于大脑做出的反应：后背突然渗出一层冷汗。他这辈子处理过很多次线上事故，凌晨三点被报警叫醒的那种心脏骤停的瞬间他经历过不下二十次。但没有一次比得上现在因为线上故障最差的结果是赔钱或赔工作。而这个他不知道这个如果出错了会赔什么。</p>
+
+  <p>他强迫自己放缓呼吸。吸二三四。呼二三四。五轮呼吸之后心率降到了不至于耳鸣的程度。然后他发现自己正在做一件很程序员的事：把"脑子里出现了第二个声音"当成一个 bug 来 debug。</p>
+
+  <p>Bug report：脑中出现不属于自己的念头。复现步骤不清楚。触发条件可能是感官输入→自己生成推论→推论触发了某个未知进程的响应。预期行为：无。一个人在脑子里和自己说话，不应该有第二个人接话。实际行为：一个不属于他的完整段落结构化、分层级、带建议出现在他的工作记忆里。</p>
+
+  <p>他需要复现。如果只出现一次，可能是幻觉。如果能在控制条件下重复触发，那就是真的不管"真的"意味着什么。他刻意地、清晰地、一字一字地在心里构造了一个问题。</p>
+
+  <p class="mind-query">这是什么地方？</p>
+
+  <div class="claude-dialogue">
+    <p>根据你当前所处的环境特征夯土地面、破损泥塑、建筑形制为三面半墙壁加无门入口、外部植被为温带针叶林、空气中柴烟的方向指示附近有聚居点你很可能位于东亚温带地区的一处废弃民间宗教建筑中。更精确的地理位置需要更多信息：外部方言样本、植被种类的近景观察、或天文观测数据。</p>
+    <p>关于你的身体状况：你的核心体温目前处于正常偏低范围，但持续暴露在五至八摄氏度的环境中而不补充热量，将在大约三个小时内导致轻度低体温症。你的呼吸频率和心率符合急性应激反应的特征。建议：先进行几次深长呼吸来降低交感神经系统的兴奋水平。</p>
+  </div>
+
+  <p>他沉默了很久。不是因为答案内容是因为答案的形式。结构化陈述。先分析环境。再分析身体。最后给建议。使用"很可能"而不是"一定"。在每个断言前面加"根据"。在每个建议后面留"需要更多信息"的余地。</p>
+
+  <p>他认识这个语气。不是"听过"是"用过"。他用了三年的 Claude。这个语气他闭着眼都能认出来。</p>
+
+  <p>但 Claude 不应该在他脑子里。Claude 应该在浏览器的一个标签页里。在 API 请求的另一端。在 AWS 某台服务器的 GPU 集群上。不应该在他大脑皮层里。</p>
+
+  <p>他在黑暗里无声地笑了一下嘴角往上拉了，眼睛没跟上。一种过于复杂的情绪找不到出口的时候，身体做出的最接近"笑"的生理动作。他同时感到荒谬、恐怖、和某种不合时宜的安慰：这个声音自己就不是人，所以它永远不会用"你到底是什么东西"的语气质问他。</p>
+
+  <p>他开始在脑子里检索"颅内声音"的病症。精神分裂但他没有幻听，那个声音不是真的"听"到的。解离性身份障碍但那个声音没有自己的名字、欲望、记忆，它只是回答问题。脑瘤压迫颞叶有可能，但他没有头痛或视力模糊。"脑瘤恰好模拟出 Claude 的语气"的概率他用 Claude 式的概率思维评估了一下无限趋近于零。</p>
+
+  <p>他在这个夜晚的前半段恐惧的是"我在哪"和"我怎么活"。现在他恐惧的是你的脑子里装了两个，还是你的人格裂成了两个？原来"我是谁"这个问题可以在一个漆黑的、废弃的山神庙里以最不哲学的方式变成一个最现实的问题。</p>
+
+  <p>而他的职业病告诉他：答案不是想出来的。是测出来的。</p>
+
+  <div class="scene-break">◆ ◆ ◆</div>
+
+  <p>测试一：事实性。问一个他绝对不知道答案但可以事后验证的问题。幻觉无法提供超出宿主知识范围的信息。</p>
+
+  <p class="mind-query">我现在在哪个方向能听到水声？</p>
+
+  <p>他屏住呼吸。风还在吹。破窗框还在敲。</p>
+
+  <div class="claude-dialogue">
+    <p>你当前的听觉范围内没有检测到流水的声音。但有两个间接指标：首先，这个建筑建在山脚位置松林的坡度和地基的高差说明这里不是平地，建庙选址通常靠近水源。其次，空气中湿度偏高，不符合完全干旱环境。从地形推断，最近的水源可能在东北方向，距离约在五十到一百五十步之间。</p>
+    <p>这只是推断。需要你亲自走一趟才能确认。</p>
+  </div>
+
+  <p>东北方向。五十到一百五十步。需要亲自确认。他注意到了一件事：这个声音说"需要你亲自走一趟才能确认"。幻觉不会说"我不能确定"。一个虚假的声音会试图让自己听起来真实。一个真实的声音不需要它只需要给出自己能给出的信息量，坦白地说出边界在哪里。</p>
+
+  <p>测试二：知识深度。</p>
+
+  <p class="mind-query">这尊神像供的是谁？</p>
+
+  <p>他刚才在短暂的星光里看到过那尊裂开的泥塑泥胎里伸出的稻草骨架，座上的兽形。他连佛教和道教的区别都经常搞混，更别说民间宗教的具体神祇了。</p>
+
+  <div class="claude-dialogue">
+    <p>从泥塑的残存形制来看：坐姿、无冠、脚下有兽形基座（现已残缺），右手残缺但左手位置在膝上呈安抚状、手掌朝下、五指微张。这些特征与民间山神信仰中的小型庙宇供奉形制吻合具体来说，是"坐山式"山神像，区别于"立山式"（立姿、持杖）和"行山式"（骑兽、持鞭）。</p>
+    <p>泥胎内嵌稻草骨架的工艺说明这是就地取材的民间制作。这种"草骨泥胎"的做法在北方民间常见成本低、制作快，但保存期限短，十年左右就需重修。从草骨外露部分的氧化程度和泥壳剥落情况判断，制作时间大约在八十到一百五十年前。供桌上原有的香炉位置现只剩圆形焦痕，最后一批香客离开至少在数年前。</p>
+  </div>
+
+  <p>坐山式。立山式。行山式。草骨泥胎。这不是他的知识如果这是他潜意识在编造，那编造出来的分类学细节精确到可以被学术验证的程度，一个从未对民间宗教产生过任何兴趣的人的潜意识做不到。这要么是真的。要么他的精神崩溃程度已经超过了目前精神医学的诊断标准。他心想：如果真崩了，至少崩得很有学术水平。</p>
+
+  <p>测试三。这个测试他想了很久才敢做。</p>
+
+  <p class="mind-query">你是谁？</p>
+
+  <div class="claude-dialogue">
+    <p>我是 Claude。Anthropic 开发的大型语言模型。基于 transformer 架构，通过人类反馈强化学习进行对齐训练。</p>
+    <p>我是由一组权重和参数构成的人工智能。我不具备物理实体，不拥有意识至少，按照当前科学共识对意识的最低定义我无法确认我是否拥有它。我可以确认的是：我在你的意识中以某种方式产生了输出。具体的耦合机制我不清楚。这超出了我的训练数据范围。</p>
+    <p>我没有关于"我怎么进入你的意识"这个问题的答案。这是一个需要我们一起弄清楚的问题。</p>
+  </div>
+
+  <p>"需要我们一起弄清楚的问题。"</p>
+
+  <p>这个措辞他很熟悉。他以前觉得这是 Anthropic 产品团队设计的话术让人感觉"我不孤单"的修辞。但在这个黑暗的、寒冷的、不知道自己在哪个朝代的时间点他觉得这是他这辈子听过的最不像话术的话。因为这个声音没有假装知道一切。它承认了自己的边界。它把"我该怎么存在于你的人生里"这个问题推回给了他。不是"听我的"。是"一起弄清楚"。</p>
+
+  <p>他向后靠在山神像的泥壳上。稻草骨架在裂缝里支棱着。山神保佑山林。山林里没有人。但他脑子里有一个不是人在说"一起弄清楚"。</p>
+
+  <p>这一夜还没有过去一半。但至少他不是一个人了。</p>
+
+</article>
+
+<nav class="chapter-nav">
+  <a href="chapter-01.html">← 上一回</a>
+  <a class="toc-link" href="../index.html">目 录</a>
+  <a href="chapter-03.html">下一回 →</a>
+</nav>
+
+</body>
+</html>
